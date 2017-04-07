@@ -1,3 +1,5 @@
+-- This statement lists the tables with most sequential scans sorted by seqscan
+
 SELECT pg_sut.relname as nom_table, seq_scan, COALESCE(seq_tup_read,0) as fullscan_tuples,
                 COALESCE(idx_scan,0) as idx_scan, COALESCE(idx_tup_fetch,0) as idxscan_tuples,
                 COALESCE(ROUND((seq_scan*1.0)/(NULLIF(idx_scan,0)*1.0),2),0) as ratio_scan,

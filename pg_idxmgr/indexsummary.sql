@@ -1,3 +1,6 @@
+-- Information on indexes on your instance :  number of rows, size, number of indexes, unique or not, how many colums
+
+
 SELECT
         pg_class.relname,
         pg_size_pretty(pg_class.reltuples::BIGINT) AS rows_in_bytes,
