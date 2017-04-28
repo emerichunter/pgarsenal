@@ -18,11 +18,14 @@ Either use the views or SQL.
 for a one shot report
 
 or
-psql -d mydatabase -f vue_nameOfScript.sql
+
+	psql -d mydatabase -f vue_nameOfScript.sql
 
 for a built-in view in your Postgres instance
 
-
+You can also use complete_idxreport.sh like this for complete audit on the fly :
+	
+	psql -d mydatabase -f complete_idxreport.sh
 
 
 

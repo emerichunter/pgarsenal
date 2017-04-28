@@ -4,12 +4,8 @@
 -- Ajouter check pg_constraints
 
 
-\echo " "
-\echo " "
-\echo "Candidates for redondant indexes"
-\echo "==============================="
-
-
+\echo Those are only candidates remove/change carefully
+\echo 
 SELECT
 DISTINCT
 --DISTINCT ON (pi.indkey,pa.attname, pa.attnum) 
