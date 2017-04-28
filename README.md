@@ -41,4 +41,10 @@ Finding databases sizes (like \l+), biggest relations by size, biggest total rel
 
 Needs an exact bloat count with pg_stattuples and script
 
+# pg_perfavisor 
+============
+
+EXTENSIONS NEEDED pg_buffercache & pg_stattuples
+
+Help for analyzing buffer caching.
 
