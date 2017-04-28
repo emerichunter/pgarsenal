@@ -28,4 +28,17 @@ You can also use complete_idxreport.sh like this for complete audit on the fly :
 	psql -d mydatabase -f complete_idxreport.sh
 
 
+# pg_checksettings 
+============
+
+Check for settings in pg_settings view in your instance that are different from default
+
+
+# pg_sizes 
+============
+
+Finding databases sizes (like \l+), biggest relations by size, biggest total relation size (data+index), approximation of bloat from check_postgres
+
+Needs an exact bloat count with pg_stattuples and script
+
 
