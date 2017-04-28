@@ -4,7 +4,7 @@
 # database and execute sample buffer cache queries
 # showing what's inside afterwards
 
-DBNAME="employees"
+DBNAME="pgbench"
 
 # Run a benchmark to put some typical data in the buffer cache
 #pgbench -S -c 8 -t 25000 $DBNAME
