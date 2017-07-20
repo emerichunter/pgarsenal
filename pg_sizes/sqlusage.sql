@@ -2,6 +2,7 @@
 -- Statements distribution
 SELECT
  d.datname::text,
+ tup_returned + tup_inserted + tup_updated + tup_deleted as total_transactions,
  case when
    (tup_returned + tup_inserted + tup_updated + tup_deleted) > 0
  then round(1000000.0 * tup_returned / (tup_returned + tup_inserted + tup_updated + tup_deleted)) / 10000
