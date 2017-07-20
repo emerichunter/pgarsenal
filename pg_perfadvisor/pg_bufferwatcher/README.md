@@ -1,3 +1,6 @@
+# pg_bufferwatcher 
+=================
+
 needs gnuplot
 
 create table with script unloggedtable_sharedbuffers.sql
@@ -8,5 +11,5 @@ plot using plot_buffers
 
 TODO :
 
-    stats need improvement by switching to gsmith's script
-    add some color
+- stats need improvement by switching to gsmith's script
+- add some color
