@@ -1,0 +1,66 @@
+ datname |   cache_hit_ratio    
+---------+----------------------
+ results |  99.8316477914485316
+ pgbench | 100.0000000000000000
+(2 rows)
+
+        ?column?        |        ?column?        
+------------------------+------------------------
+ 0.08050219776136883137 | 0.68263944371008134273
+(1 row)
+
+ datname | select_pct | insert_pct | update_pct | delete_pct 
+---------+------------+------------+------------+------------
+ results |    88.7323 |    11.2628 |     0.0049 |     0.0001
+ pgbench |    99.9992 |     0.0004 |     0.0000 |     0.0004
+(2 rows)
+
+ schemaname | relname | heap_blks_read | heap_blks_hit | hit_pct | idx_blks_read | idx_blks_hit | idx_hit_pct 
+------------+---------+----------------+---------------+---------+---------------+--------------+-------------
+(0 rows)
+
+ schemaname | relname | seq_tup_read | idx_tup_fetch | total_reads | idx_read_pct | total_size 
+------------+---------+--------------+---------------+-------------+--------------+------------
+(0 rows)
+
+ schemaname | relname | indexrelname | idx_scan | index_size 
+------------+---------+--------------+----------+------------
+(0 rows)
+
+ pg_stat_reset 
+---------------
+ 
+(1 row)
+
+DELETE 1
+INSERT 0 1
+ start | elapsed | avg_checkpoint_interval | checkpoints_req_pct | checkpoint_write_pct | backend_write_pct | avg_checkpoint_write | written_per_sec | alloc_per_sec 
+-------+---------+-------------------------+---------------------+----------------------+-------------------+----------------------+-----------------+---------------
+(0 rows)
+
+ usagecount | count | isdirty 
+------------+-------+---------
+          1 | 48311 | f
+          2 | 74430 | f
+          3 | 67904 | f
+          4 | 59753 | f
+          5 | 11314 | f
+          2 |     1 | t
+          5 |     1 | t
+            |   430 | 
+(8 rows)
+
+        relname        | buffered | buffers_percent | percent_of_relation 
+-----------------------+----------+-----------------+---------------------
+ pgbench_accounts      | 1322 MB  |            64.6 |                10.3
+ pgbench_accounts_pkey | 712 MB   |            34.8 |                33.3
+ pg_am                 | 40 kB    |             0.0 |               500.0
+ pg_amproc             | 72 kB    |             0.0 |               180.0
+ pg_attrdef            | 40 kB    |             0.0 |               500.0
+ pg_cast               | 48 kB    |             0.0 |               300.0
+ pg_conversion         | 32 kB    |             0.0 |               133.3
+ pg_constraint         | 32 kB    |             0.0 |               400.0
+ pg_amop               | 80 kB    |             0.0 |               166.7
+ pg_aggregate          | 40 kB    |             0.0 |               250.0
+(10 rows)
+

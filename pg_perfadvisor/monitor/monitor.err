@@ -1,0 +1,9 @@
+psql:monitor.sql:108: ERROR:  column t.reltoastidxid does not exist
+LINE 24:    case when t.reltoastidxid > 0
+                      ^
+HINT:  Perhaps you meant to reference the column "t.reltoastrelid".
+psql:monitor.sql:203: ERROR:  syntax error at or near "pg_stat_reset_shared"
+LINE 1: pg_stat_reset_shared('bgwriter') can be used to reset pg_sta...
+        ^
+psql:monitor.sql:207: ERROR:  relation "pg_stat_bgwriter_snapshot" already exists
+psql:monitor.sql:242: ERROR:  extension "pg_buffercache" already exists
