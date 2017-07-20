@@ -22,4 +22,4 @@ It also differenciates them between clean and dirty
 
 TO DO : 
 - improve report_buffercache.sh and fix bugs
-- log evolution throuhout time ofg shared_buffers_gsmith.sql
+- log evolution throuhout time of shared_buffers_gsmith.sql
