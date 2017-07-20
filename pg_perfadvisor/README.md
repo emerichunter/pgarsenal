@@ -1,16 +1,24 @@
-# pg_perfmonitor (pg_perfavisor)
+# pg_perfavisor (pg_perfmonitor) 
 =================
 
-needs gnuplot
+Run `extensions_needed.sql` first on every database needed
 
-create table with script unloggedtable_sharedbuffers.sql
+A full report is given by 
+`./report_buffercache.sh`
 
-watch and log buffers with script sharedbuffers_usage_watcher.sh
+Don't forget to give the script proper rights
 
-plot using plot_buffers
+`top10_buffers.sql` gives the table most found in cache (tables with most traffic)
+
+`last_analyze_vacuum.sql` tells you which tables never had vacuum or analyze (auto or manual)
+
+`bgwriter_vs_chkpt_snapshots.sql` is for creating and monitoring snapshots of pg_stat_bgwriter view.
+-- Buffer, background writer, and checkpoint activity
+
+`shared_buffers_gsmith.sql` is more nuanced as it prints out buffers by group.
+It also differenciates them between clean and dirty
 
 
-TODO : 
-- stats need improvement by switching to gsmith's script 
-- add some color
-
+TO DO : 
+- improve report_buffercache.sh and fix bugs
+- log evolution throuhout time ofg shared_buffers_gsmith.sql
