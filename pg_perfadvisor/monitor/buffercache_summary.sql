@@ -1,6 +1,8 @@
 -- Summary of buffer cache (G.Smith)
 -- Summary by usage count
 
+-- Needs create extension "pg_buffercache"; to work
+
 SELECT usagecount,count(*),isdirty
 FROM pg_buffercache
 GROUP BY isdirty,usagecount
