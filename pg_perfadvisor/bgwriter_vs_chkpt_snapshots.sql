@@ -1,5 +1,7 @@
 -- CREATE UNLOGGED TABLE
 -- Buffer, background writer, and checkpoint activity
+
+-- First part not relevant since pg_stat_bgwriter is now default
 /*
 CREATE VIEW pg_stat_bgwriter AS
 SELECT
@@ -13,14 +15,18 @@ SELECT
 
 */
 
+
+-- Creation of table
 CREATE UNLOGGED TABLE pg_stat_bgwriter_snapshot AS SELECT current_timestamp,* FROM pg_stat_bgwriter;
 
--- IF NEEDED
+-- IF NEEDED to cleanup
 --delete from pg_stat_bgwriter_snapshot;
 
--- cron every hour, day or any relevant timeframe depending on traffic
+-- cron every minute, hour, day or any relevant timeframe depending on traffic
 INSERT INTO pg_stat_bgwriter_snapshot (SELECT current_timestamp,* FROM pg_stat_bgwriter);
 
+
+-- This part to view collected statistics
 SELECT
     cast(date_trunc('minute',start) AS timestamp) AS start,
     date_trunc('second',elapsed) AS elapsed,
