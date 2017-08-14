@@ -2,6 +2,7 @@
 -- Statements distribution of tuples. So this is not transactions but number of tuples (rows)
 SELECT
  d.datname::text,
+  tup_returned as selected, tup_inserted as inserted, tup_updated as updated, tup_deleted as deleted, 
  tup_returned + tup_inserted + tup_updated + tup_deleted as total_transactions,
  case when
    (tup_returned + tup_inserted + tup_updated + tup_deleted) > 0
