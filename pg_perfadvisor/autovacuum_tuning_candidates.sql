@@ -1,7 +1,7 @@
 -- tables candidate for autovacuum
 -- shows tables which are near autovacuum threshold
 -- a table above the thresahold and with a lot of activity could find it hard to autovacuum
--- you should then consider these tables for a little tunig of autovacuum
+-- you should then consider these tables for a little tuning of autovacuum
 
 SELECT psut.relname,
      to_char(psut.last_vacuum, 'YYYY-MM-DD HH24:MI') as last_vacuum,
