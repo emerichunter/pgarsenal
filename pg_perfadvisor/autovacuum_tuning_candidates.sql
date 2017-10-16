@@ -3,7 +3,7 @@
 -- a table above the thresahold and with a lot of activity could find it hard to autovacuum
 -- you should then consider these tables for a little tuning of autovacuum
 
-SSELECT psut.relname,
+SELECT psut.relname,
      to_char(psut.last_vacuum, 'YYYY-MM-DD HH24:MI') as last_vacuum,
      to_char(psut.last_autovacuum, 'YYYY-MM-DD HH24:MI') as last_autovacuum,
      to_char(pg_class.reltuples,  '9G999G999G999')  AS n_tup,
